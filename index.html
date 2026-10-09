@@ -1,4 +1,9 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Alu Fab ERP</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alu Fab ERP</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
@@ -45,8 +50,105 @@ button.tile{background:var(--c);color:var(--t);border:1px solid var(--b);padding
 .ff{padding:12px 20px;border-top:1px solid var(--b);display:flex;gap:10px;justify-content:flex-end;background:var(--c)}.ff button{min-width:96px}
 .mo input,.mo select{width:100%;min-width:0}.mo label{min-width:0}
 @media(max-width:600px){.fb{grid-template-columns:minmax(0,1fr);padding:14px}.mo h3,.ff{padding-left:14px;padding-right:14px}input,select{font-size:16px}.top{flex-wrap:wrap}.ff button{flex:1}.bar input,.bar select{flex:1 1 140px;min-width:0}}
-</style></head><body><div id=app></div><script>
-const ITEMS=[["3935", "ETPSD SHUTTER SASH TOP &BOTTOM DGU-90 DEGREE"], ["3937", "ETPSD OTHERS GUIDE RAIL"], ["3938", "ETPSD OTHERS 45 DEGREE WATER PROTECTION PROFILE"], ["3947", "ETPSD OTHERS SGU ADPTOR2-10 TO14MM GLASS"], ["3949", "ETPSD OTHERS MESH SASH ADAPTER"], ["3952", "ETPSD OTHERS SGU ADPTOR 1-5 TO 8MM GLASS"], ["4351", "2MM BEADING PROFILE"], ["4496", "ALUM RAIL"], ["4571", "ETPSD-CORNER REINFORCEMENT"], ["7757", "OTHERS LOCKING ROAD"], ["7787", "FRAME-OUTER-FRAME"], ["7812", "MULLION ADD ON CENTER MULLION FIXED"], ["8059", "FRAME OUTER FRAME BIG"], ["11861", "ETECS-39.6MM OUTER FRAME"], ["11862", "ETECS-SHUTTER-OPTION 1"], ["11863", "MULLION/TRANSOM"], ["11864", "ETECS-INVERSION PROFILE"], ["11865", "ETECS-GLAZING BEAD COMBINATION FRAME"], ["11878", "ETESD-OTHERS-FLY MESH MIDRAIL FOR ADPTOR"], ["11967", "REINFORCED MULLION"], ["12070", "FLYSCREEN ADAPTOR"], ["12261", "ETESD PRO RAIL"], ["12262", "2.5 OUTER FRAME TRACK"], ["12263", "2.5 BOTTOM TRACK"], ["12264", "SGU SHUTTER PROFILE"], ["12265", "111.5MM SGU INTERLOCK"], ["12266", "SGU INTERLOCK"], ["12267", "WATER PROTECTION BAR"], ["12268", "CORNER REINF PROFILE"], ["12269", "T CONNECTOR"], ["12270", "MEETING STYLE ADAPTORE 3"], ["12271", "3.5 OUTER FRAME TRACK"], ["12272", "3.5 OUTER BOTTOM TRACK"], ["12306", "DGU SHUTTER PROFILE"], ["12307", "2.5 FIX FTRAME PROFILE"], ["12308", "96.5MM SGU INTERLOCK"], ["12309", "96.5MM DGU INTERLOCK"], ["12310", "66.5MM SGU INTERLOCK"], ["12311", "DGU INTERLOCK"], ["12312", "111.5 MM DGU INTERLOCK"], ["12313", "MEETING STYLE ADAPTORE 1"], ["12314", "MEETING STYLE ADPTORE 2"], ["12328", "66.5MM DGU INTERLOCK"], ["12332", "MULTIPOINT ADAPTOR PROFILE"], ["12429", "20.5MM BEADING PROFILE"], ["12705", "REINFORCEMENT INTERLOCK-65MM PROJECTION"], ["12951", "DRIP BAR"], ["12953", "SHUTTER TOP/BOTTOM"], ["12974", "ESSENTIAL 2 TRACK"], ["12976", "ESSENTIAL PLUS RAIL"], ["12977", "ESSENTIAL HANDALE"], ["85745", "ETPSD SHUTTER SASH HANDLE SECTION DGU 90 DEGREE"], ["85748", "ETPSD FRAME FRAME 45 DEGREE 3T"], ["85758", "ETP SD FRAME FRAME 45 DEGREE 2T"], ["85772", "ETP SD OTHERS BI PART ADAPTOR OPTION 1"], ["85793", "ETPSD-FRAME-FIXED-COMBI-3T FRAME-ALL 4 SIDE ADD ON"], ["85795", "ETPSD OTHERS MESH SASH MID RAIL"], ["85830", "ETPSD BI PART ADPTOR OPTION 2(PART-2)"], ["85831", "ETPSD BI PART ADPTOR OPTION 2(PART-1)"], ["85838", "ETPCS SASH OPEN OUT (WINDOW)"], ["85839", "SASH OPEN IN (WINDOW)"], ["85840", "CLIP 5-6MM ETPCS (OPENABLE ONLY)"], ["85841", "CLIP 18-20MM ETPCS"], ["85848", "ETPCS GLAZING BEAD 26MM"], ["85849", "ETP CS GLAZING BEAD 34MM"], ["85850", "GLAZING BEAD 18MM"], ["85851", "ETPCS GLAZING BEAD 10MM"], ["85853", "ETPCS-T-SASH LIGHT DOOR(UPTO 2.4 MTR)"], ["85855", "ETPCS SASH DOOR OPEN IN(2.4M&ABOVE)"], ["85856", "ETPCS SASH DOOR OPEN OUT (2.4M&ABOVE)"], ["85859", "ETPCS-T-MULLION"], ["85860", "ETPCS-T MULLION REIFORCED 120"], ["85861", "ETP-STULP WINDOW 2 PANEL OPEN IN AND OUT"], ["85862", "ETPCS LOWER DOOR SASH TRANSOM"], ["85863", "ETPCS-ADPTOR SECTION"], ["85915", "120MM INTELOCK"], ["85941", "ETPSD-MULTI TRACK PROFILE"], ["85981", "REINFORCED HANDLE PROFILE"], ["85982", "ETPSD 90MM INTERLOCK"], ["85983", "ETPSD 70MM INTERLOCK"], ["85984", "ETP DOUBLE INTERLOCK"], ["85985", "ETPSD INTELOCK"], ["86004", "3 TRACK NEW UPGRADE"], ["86005", "2 TRACK OUTER FRAME"], ["86018", "60MM INTERLOCK(ESSENTIAL)"], ["86042", "FLUSH INTERLOCK"], ["F043", "25*3MM FLAT BAR"]],LS='alufab_erp_v2',$=s=>document.querySelector(s);
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+/* 87 items from the STOCK MASTER sheet: [item code, description] */
+window.SEED_ITEMS=[
+  ["3935", "ETPSD SHUTTER SASH TOP &BOTTOM DGU-90 DEGREE"],
+  ["3937", "ETPSD OTHERS GUIDE RAIL"],
+  ["3938", "ETPSD OTHERS 45 DEGREE WATER PROTECTION PROFILE"],
+  ["3947", "ETPSD OTHERS SGU ADPTOR2-10 TO14MM GLASS"],
+  ["3949", "ETPSD OTHERS MESH SASH ADAPTER"],
+  ["3952", "ETPSD OTHERS SGU ADPTOR 1-5 TO 8MM GLASS"],
+  ["4351", "2MM BEADING PROFILE"],
+  ["4496", "ALUM RAIL"],
+  ["4571", "ETPSD-CORNER REINFORCEMENT"],
+  ["7757", "OTHERS LOCKING ROAD"],
+  ["7787", "FRAME-OUTER-FRAME"],
+  ["7812", "MULLION ADD ON CENTER MULLION FIXED"],
+  ["8059", "FRAME OUTER FRAME BIG"],
+  ["11861", "ETECS-39.6MM OUTER FRAME"],
+  ["11862", "ETECS-SHUTTER-OPTION 1"],
+  ["11863", "MULLION/TRANSOM"],
+  ["11864", "ETECS-INVERSION PROFILE"],
+  ["11865", "ETECS-GLAZING BEAD COMBINATION FRAME"],
+  ["11878", "ETESD-OTHERS-FLY MESH MIDRAIL FOR ADPTOR"],
+  ["11967", "REINFORCED MULLION"],
+  ["12070", "FLYSCREEN ADAPTOR"],
+  ["12261", "ETESD PRO RAIL"],
+  ["12262", "2.5 OUTER FRAME TRACK"],
+  ["12263", "2.5 BOTTOM TRACK"],
+  ["12264", "SGU SHUTTER PROFILE"],
+  ["12265", "111.5MM SGU INTERLOCK"],
+  ["12266", "SGU INTERLOCK"],
+  ["12267", "WATER PROTECTION BAR"],
+  ["12268", "CORNER REINF PROFILE"],
+  ["12269", "T CONNECTOR"],
+  ["12270", "MEETING STYLE ADAPTORE 3"],
+  ["12271", "3.5 OUTER FRAME TRACK"],
+  ["12272", "3.5 OUTER BOTTOM TRACK"],
+  ["12306", "DGU SHUTTER PROFILE"],
+  ["12307", "2.5 FIX FTRAME PROFILE"],
+  ["12308", "96.5MM SGU INTERLOCK"],
+  ["12309", "96.5MM DGU INTERLOCK"],
+  ["12310", "66.5MM SGU INTERLOCK"],
+  ["12311", "DGU INTERLOCK"],
+  ["12312", "111.5 MM DGU INTERLOCK"],
+  ["12313", "MEETING STYLE ADAPTORE 1"],
+  ["12314", "MEETING STYLE ADPTORE 2"],
+  ["12328", "66.5MM DGU INTERLOCK"],
+  ["12332", "MULTIPOINT ADAPTOR PROFILE"],
+  ["12429", "20.5MM BEADING PROFILE"],
+  ["12705", "REINFORCEMENT INTERLOCK-65MM PROJECTION"],
+  ["12951", "DRIP BAR"],
+  ["12953", "SHUTTER TOP/BOTTOM"],
+  ["12974", "ESSENTIAL 2 TRACK"],
+  ["12976", "ESSENTIAL PLUS RAIL"],
+  ["12977", "ESSENTIAL HANDALE"],
+  ["85745", "ETPSD SHUTTER SASH HANDLE SECTION DGU 90 DEGREE"],
+  ["85748", "ETPSD FRAME FRAME 45 DEGREE 3T"],
+  ["85758", "ETP SD FRAME FRAME 45 DEGREE 2T"],
+  ["85772", "ETP SD OTHERS BI PART ADAPTOR OPTION 1"],
+  ["85793", "ETPSD-FRAME-FIXED-COMBI-3T FRAME-ALL 4 SIDE ADD ON"],
+  ["85795", "ETPSD OTHERS MESH SASH MID RAIL"],
+  ["85830", "ETPSD BI PART ADPTOR OPTION 2(PART-2)"],
+  ["85831", "ETPSD BI PART ADPTOR OPTION 2(PART-1)"],
+  ["85838", "ETPCS SASH OPEN OUT (WINDOW)"],
+  ["85839", "SASH OPEN IN (WINDOW)"],
+  ["85840", "CLIP 5-6MM ETPCS (OPENABLE ONLY)"],
+  ["85841", "CLIP 18-20MM ETPCS"],
+  ["85848", "ETPCS GLAZING BEAD 26MM"],
+  ["85849", "ETP CS GLAZING BEAD 34MM"],
+  ["85850", "GLAZING BEAD 18MM"],
+  ["85851", "ETPCS GLAZING BEAD 10MM"],
+  ["85853", "ETPCS-T-SASH LIGHT DOOR(UPTO 2.4 MTR)"],
+  ["85855", "ETPCS SASH DOOR OPEN IN(2.4M&ABOVE)"],
+  ["85856", "ETPCS SASH DOOR OPEN OUT (2.4M&ABOVE)"],
+  ["85859", "ETPCS-T-MULLION"],
+  ["85860", "ETPCS-T MULLION REIFORCED 120"],
+  ["85861", "ETP-STULP WINDOW 2 PANEL OPEN IN AND OUT"],
+  ["85862", "ETPCS LOWER DOOR SASH TRANSOM"],
+  ["85863", "ETPCS-ADPTOR SECTION"],
+  ["85915", "120MM INTELOCK"],
+  ["85941", "ETPSD-MULTI TRACK PROFILE"],
+  ["85981", "REINFORCED HANDLE PROFILE"],
+  ["85982", "ETPSD 90MM INTERLOCK"],
+  ["85983", "ETPSD 70MM INTERLOCK"],
+  ["85984", "ETP DOUBLE INTERLOCK"],
+  ["85985", "ETPSD INTELOCK"],
+  ["86004", "3 TRACK NEW UPGRADE"],
+  ["86005", "2 TRACK OUTER FRAME"],
+  ["86018", "60MM INTERLOCK(ESSENTIAL)"],
+  ["86042", "FLUSH INTERLOCK"],
+  ["F043", "25*3MM FLAT BAR"]
+];
+</script>
+<script>
+/* Alu Fab ERP - browser app (UI, business rules). Data lives in `db`; sv() saves it to browser storage. */
+const ITEMS=window.SEED_ITEMS||[],LS='alufab_erp_v2',$=s=>document.querySelector(s);
 const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,6),today=()=>new Date().toLocaleDateString('en-CA');
 const E=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let db=JSON.parse(localStorage.getItem(LS)||'null')||{items:ITEMS.map(([c,d])=>({id:c,code:c,desc:d,open:0,wt:0,len:0,rateType:'AVG',rate:0,img:''})),sin:[],sout:[],po:[],mr:[],log:[],users:[{id:'admin',name:'admin',pass:'admin123',role:'Admin'}],set:{company:'ALU FAB SYSTEMS WINDOWS',critical:10,reorder:20,safety:10}};
@@ -61,6 +163,7 @@ const ord=(p,c)=>sum(db.po.filter(x=>x.po==p&&x.code==c),x=>x.qty),rec=(p,c,ex)=
 const pend=c=>Math.max(0,sum(db.po.filter(x=>x.code==c),x=>x.qty)-sum(db.mr.filter(x=>x.code==c),x=>x.qty)-sum(db.mr.filter(x=>x.code==c),x=>x.short));
 const poSt=p=>{const r=rec(p.po,p.code)+shc(p.po,p.code);return r<=0?'OPEN':r<p.qty?'PARTIAL':'CLOSED'};
 const val=(c,q)=>{const i=item(c);return !i?0:Math.round((i.rateType=='PERKG'?q*i.wt*i.rate:q*i.rate)*100)/100};
+const valR=r=>{const i=item(r.code);return !i?0:!r.rateType?val(r.code,r.qty):Math.round((r.rateType=='PERKG'?r.qty*i.wt*r.rate:r.qty*r.rate)*100)/100};
 const stt=c=>{const k=db.set,q=cur(c),a=q+pend(c);return q<=k.critical?'CRITICAL':a<k.reorder?'ORDER REQUIRED':k.reorder+k.safety-a>0?'LOW STOCK':'OK'};
 const cls=s=>/CRIT|CLOSED/.test(s)&&s!='CLOSED'?'bad':/ORDER|LOW|OPEN|PARTIAL/.test(s)?'wn':'ok';
 const stH=r=>`<span class="pill ${cls(r.st)}">${r.st}</span>`;
@@ -75,11 +178,11 @@ sout:{l:'Outward',arr:()=>db.sout,f:()=>[{k:'code',l:'Item (type code or name to
  chk:(r,o)=>{if(db.set.stockOut!='YES')return 'Outward is switched off in Settings.';const a=cur(r.code)+(o&&o.code==r.code?+o.qty:0);return r.qty<=0?'Qty must be above 0.':r.qty>a?'Available stock is only '+a+' nos.':0}},
 po:{l:'PO line',arr:()=>db.po,f:()=>[{k:'po',l:'PO no (5 digits)',req:1},{k:'party',l:'Party name'},{k:'date',l:'Date',t:'date',d:today()},{k:'code',l:'Item (type code or name to search)',t:'item',o:itemOpts(),req:1},{k:'qty',l:'Order qty',t:'number',req:1}],
  chk:(r,o)=>!/^\d{5}$/.test(r.po)?'PO number must be 5 digits.':r.qty<=0?'Qty must be above 0.':db.set.dupPO=='YES'&&db.po.some(x=>x!==o&&x.po==r.po&&x.code==r.code)?'This item is already in this PO.':0},
-mr:{l:'Material received',arr:()=>db.mr,f:()=>[{k:'inv',l:'Material invoice no',req:1},{k:'invDate',l:'Invoice date',t:'date',d:today()},{k:'po',l:'PO no',t:'select',o:poOpts(),req:1},{k:'code',l:'Item (type code or name to search)',t:'item',o:itemOpts(),req:1},{k:'qty',l:'Received qty',t:'number',req:1},{k:'date',l:'Received date',t:'date',d:today()},{k:'challan',l:'Challan / LR no'},{k:'sc',l:'Short close remaining qty?',t:'select',o:['No','Yes']},{k:'remark',l:'Remark (needed for extra qty)'}],
+mr:{l:'Material received',arr:()=>db.mr,f:()=>[{k:'inv',l:'Material invoice no',req:1},{k:'invDate',l:'Invoice date',t:'date',d:today()},{k:'po',l:'PO no',t:'select',o:poOpts(),req:1},{k:'code',l:'Item (type code or name to search)',t:'item',o:itemOpts(),req:1},{k:'qty',l:'Received qty',t:'number',req:1},{k:'rateType',l:'Rate type (choose one)',t:'select',o:[['AVG','Average rate'],['PERKG','Per Kg rate']],req:1},{k:'rate',l:'Rate',t:'number',req:1},{k:'date',l:'Received date',t:'date',d:today()},{k:'challan',l:'Challan / LR no'},{k:'sc',l:'Short close remaining qty?',t:'select',o:['No','Yes']},{k:'remark',l:'Remark (needed for extra qty)'}],
  chk:(r,o)=>{if(db.set.mrAllowed!='YES')return 'Material receive is switched off in Settings.';if(ord(r.po,r.code)<=0)return 'This item is not in this PO.';if(db.set.dupInvoice=='YES'&&db.mr.some(x=>x!==o&&x.inv==r.inv.toUpperCase()&&x.po==r.po&&x.code==r.code))return 'This invoice is already booked for this PO and item.';if(r.qty<=0)return 'Qty must be above 0.';return r.qty>B(r,o)&&db.set.allowExtra!='YES'?'Extra qty is not allowed in Settings.':r.qty>B(r,o)&&!r.remark?'Enter a remark for the extra qty.':0},
  init:(m,o)=>{const P=m.querySelector('[name=po]'),I=m.querySelector('[name=code]'),Q=m.querySelector('[name=qty]'),L=m.querySelector('#dl_code'),inf=document.createElement('div');inf.style.cssText='grid-column:1/-1;color:var(--m);font-size:13px;padding:8px 10px;background:var(--pt);border-radius:8px';Q.closest('label').after(inf);
 const lst=()=>{const cs=[...new Set(db.po.filter(x=>x.po==P.value).map(x=>x.code))];L.innerHTML=cs.map(c=>`<option value="${E(c+' - '+(item(c)?.desc||''))}">`).join('');return cs},
-show=s=>{const c=codeOf(I.value),p=P.value;if(!p){inf.textContent='No PO yet - add the PO in PO order first.';return}if(!c||!ord(p,c)){inf.textContent='Select an item that is in this PO.';return}const b=Math.max(0,B({po:p,code:c},o));inf.innerHTML=`PO ordered <b>${ord(p,c)}</b> | Received ${rec(p,c,o?.id)} | Short closed ${shc(p,c,o?.id)} | Pending <b>${b}</b>`;if(s)Q.value=b};
+show=s=>{const c=codeOf(I.value),p=P.value;if(!p){inf.textContent='No PO yet - add the PO in PO order first.';return}if(!c||!ord(p,c)){inf.textContent='Select an item that is in this PO.';return}const b=Math.max(0,B({po:p,code:c},o));inf.innerHTML=`PO ordered <b>${ord(p,c)}</b> | Received ${rec(p,c,o?.id)} | Short closed ${shc(p,c,o?.id)} | Pending <b>${b}</b>`;if(s){Q.value=b;const it=item(c);if(it){m.querySelector('[name=rateType]').value=it.rateType;m.querySelector('[name=rate]').value=it.rate}}};
 P.onchange=()=>{I.value='';const cs=lst();if(cs.length==1)I.value=cs[0]+' - '+(item(cs[0])?.desc||'');show(1)};I.oninput=I.onchange=()=>show(1);
 if(o){lst();show(0)}else P.onchange()},
 pre:(r,o)=>{const b=B(r,o);r.extra=Math.max(0,r.qty-b);r.short=r.sc=='Yes'&&db.set.allowShort=='YES'&&r.qty<b?b-r.qty:0;r.inv=r.inv.toUpperCase()}},
@@ -98,7 +201,7 @@ if(en=='items'&&[db.sin,db.sout,db.po,db.mr].some(a=>a.some(x=>x.code==o.code)))
 if(en=='users'&&(o.name==me.name||(o.role=='Admin'&&db.users.filter(u=>u.role=='Admin').length<2)))return alert('Cannot delete yourself or the last Admin.');
 if(!confirm('Delete this '+c.l.toLowerCase()+'?'))return;c.arr().splice(c.arr().indexOf(o),1);lg('DELETE',c.l+': '+(o.code||o.po||o.inv||o.name));toast('Deleted');go(S.tab)}
 let LID={};const txns=()=>{LID={};const a=[...db.sin.map(x=>({...x,type:'INWARD',in:+x.qty,out:0,po:'',inv:'',remark:x.remark})),...db.sout.map(x=>({...x,type:'OUTWARD',in:0,out:+x.qty,po:'',inv:'',remark:x.used})),...db.mr.map(x=>({...x,type:'PO RECEIVED',in:+x.qty,out:0,remark:x.remark+(x.extra?' [extra '+x.extra+']':'')+(x.short?' [short close '+x.short+']':'')}))].sort((p,q)=>(p.date||'').localeCompare(q.date||'')||p.t-q.t),bal={};
-return a.map((x,i)=>{bal[x.code]=bal[x.code]??+(item(x.code)?.open||0);bal[x.code]+=x.in-x.out;const tid='TRN'+String(i+1).padStart(6,'0');LID[x.id]=tid;return{date:x.date,tid,type:x.type,code:x.code,desc:item(x.code)?.desc||'',po:x.po,inv:x.inv,invDate:x.invDate||'',challan:x.challan||'',in:x.in,out:x.out,bal:bal[x.code],val:val(x.code,x.in||x.out),remark:x.remark,by:x.by}})};
+return a.map((x,i)=>{bal[x.code]=bal[x.code]??+(item(x.code)?.open||0);bal[x.code]+=x.in-x.out;const tid='TRN'+String(i+1).padStart(6,'0');LID[x.id]=tid;return{date:x.date,tid,type:x.type,code:x.code,desc:item(x.code)?.desc||'',po:x.po,inv:x.inv,invDate:x.invDate||'',challan:x.challan||'',in:x.in,out:x.out,bal:bal[x.code],val:x.type=='PO RECEIVED'?valR(x):val(x.code,x.in||x.out),remark:x.remark,by:x.by}})};
 const C=(k,l,o={})=>({k,l,...o});
 const V={
 items:()=>({t:'Items',ent:'items',cols:[C('img','Image',{x:1,h:r=>r.img?`<img class=th src="${r.img}" onclick="zoom(this.src)">`:'-'}),C('code','Item code'),C('desc','Description'),C('open','Opening stock'),C('wt','Weight/pc (Kg)'),C('len','Length (Ft.)'),C('rt','Rate type',{s:1}),C('rate','Rate'),C('cur','Current stock'),C('pend','Pending PO'),C('fut','Future stock'),C('st','Status',{s:1,h:stH}),C('val','Stock value')],
@@ -106,7 +209,7 @@ items:()=>({t:'Items',ent:'items',cols:[C('img','Image',{x:1,h:r=>r.img?`<img cl
 sin:()=>({t:'Inward',ent:'sin',dk:'date',cols:[C('date','Date'),C('code','Item code',{s:1}),C('desc','Description'),C('qty','Inward qty'),C('remark','Remark'),C('lid','Ledger ID'),C('by','By',{s:1})],rows:db.sin.map(x=>({...x,lid:LID[x.id],desc:item(x.code)?.desc}))}),
 sout:()=>({t:'Outward',ent:'sout',dk:'date',cols:[C('date','Date'),C('code','Item code',{s:1}),C('desc','Description'),C('qty','Outward qty'),C('used','Used for'),C('lid','Ledger ID'),C('by','By',{s:1})],rows:db.sout.map(x=>({...x,lid:LID[x.id],desc:item(x.code)?.desc}))}),
 po:()=>({t:'PO order',ent:'po',dk:'date',cols:[C('po','PO no',{s:1}),C('party','Party',{s:1}),C('date','Date'),C('code','Item code',{s:1}),C('desc','Description'),C('qty','Order qty'),C('st','Status',{s:1,h:stH}),C('after','After PO closed')],rows:db.po.map(x=>{const s=poSt(x),r=rec(x.po,x.code)+shc(x.po,x.code);return{...x,desc:item(x.code)?.desc,st:s,after:s=='OPEN'?'':s=='PARTIAL'?x.qty-r:Math.max(0,r-x.qty)}})}),
-mr:()=>({t:'Material received',ent:'mr',dk:'date',cols:[C('inv','Invoice no'),C('invDate','Invoice date'),C('po','PO no',{s:1}),C('code','Item code',{s:1}),C('qty','Received'),C('extra','Extra'),C('short','Short close'),C('date','Received date'),C('challan','Challan / LR'),C('remark','Remark'),C('lid','Ledger ID'),C('by','Received by',{s:1})],rows:db.mr.map(x=>({...x,lid:LID[x.id]}))}),
+mr:()=>({t:'Material received',ent:'mr',dk:'date',cols:[C('inv','Invoice no'),C('invDate','Invoice date'),C('po','PO no',{s:1}),C('code','Item code',{s:1}),C('qty','Received'),C('rt','Rate type',{s:1}),C('rate','Rate'),C('val','Value'),C('extra','Extra'),C('short','Short close'),C('date','Received date'),C('challan','Challan / LR'),C('remark','Remark'),C('lid','Ledger ID'),C('by','Received by',{s:1})],rows:db.mr.map(x=>({...x,lid:LID[x.id],rt:x.rateType=='PERKG'?'Per Kg':x.rateType?'Average':'',val:valR(x)}))}),
 txn:()=>({t:'Stock ledger',dk:'date',cols:[C('tid','Trn ID'),C('date','Date'),C('code','Item code',{s:1}),C('desc','Description'),C('type','Transaction type',{s:1}),C('po','PO number'),C('in','Inward qty'),C('out','Outward qty'),C('bal','Balance'),C('remark','Remark'),C('inv','Material invoice no'),C('invDate','Invoice date'),C('challan','Challan / LR no'),C('val','Value'),C('by','By',{s:1})],rows:txns()}),
 plan:()=>({t:'Purchase planning',cols:[C('code','Item code'),C('desc','Description'),C('cur','Current stock'),C('pend','Pending PO'),C('av','Available / future stock'),C('ro','Reorder level'),C('ss','Safety stock'),C('req','Required qty'),C('st','Status',{s:1,h:stH})],
  rows:db.items.map(i=>{const q=cur(i.code),p=pend(i.code),k=db.set;return{code:i.code,desc:i.desc,cur:q,pend:p,av:q+p,ro:k.reorder,ss:k.safety,req:Math.max(0,k.reorder+k.safety-q-p),st:stt(i.code)}})}),
@@ -171,4 +274,6 @@ const c=R[0]?.[2],sm=c&&item(c)?(l=>`<div class=card><h3>${E(c)} - ${E(D(c))}</h
 $('#sr').innerHTML=sm+`<div class=card><h3>${R.length} results</h3>${mini(['Date','Source sheet','Item code','Description','Qty','PO no','Invoice no','Remark'],R.slice(0,500).map(r=>r.map(E)))}</div>`}
 navigator.storage?.persist?.();
 me?go('dash'):login();
-</script></body></html>
+</script>
+</body>
+</html>
